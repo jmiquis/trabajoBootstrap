@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAA;EACT,OAAO,EAAC,IAAI;CACb;;AACD,AAAA,aAAa,CAAA;EACX,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;CACjB;;AACD,AAAA,aAAa,AAAA,MAAM,GAAC,aAAa,CAAA;EAC/B,OAAO,EAAE,KAAK;EACd,QAAQ,EAAC,QAAQ;EACjB,gBAAgB,EAAE,yBAAsB;CACzC;;AAGD,AAAA,eAAe,CAAA;EACb,aAAa,EAAE,kBAAkB;EACjC,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACd",
+    "sources": [
+        "../practicaCSS3/styles CSS/estilosEjercicios.scss"
+    ],
+    "names": [],
+    "file": "estilosEjercicios.css"
+}

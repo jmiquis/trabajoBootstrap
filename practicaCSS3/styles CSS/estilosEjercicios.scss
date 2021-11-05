@@ -1,0 +1,24 @@
+ $bordeTablas:1px solid black;
+
+.desplegable1{
+    padding:auto;
+  }
+  .desplegable2{
+    display: none;
+    padding: none;
+    list-style: none;
+  }
+  .desplegable1:hover>.desplegable2{
+    display: block;
+    position:absolute;
+    background-color: hsla(0, 0%, 48%, 0.39);
+  }
+
+  // propiedad rounded corners
+  .roundedCorners{
+    border-radius: 15px 50px 30px 5px;
+    background-color: black;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+  }

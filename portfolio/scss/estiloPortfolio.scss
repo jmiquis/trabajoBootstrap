@@ -1,0 +1,122 @@
+
+$logoSize:40px;
+$colorFuente1:#585191;
+$colorFondo1:hsla(360, 100%, 0%, 0.50);
+$borde1:1px solid $colorFuente1;
+
+
+
+//fuentes
+@font-face{
+    font-family:noto;
+    src: url("../fuentes/noto/NotoSansSC-Regular.otf");
+}
+@font-face {
+    font-family:zen;
+    src: url("../fuentes/zen/ZenAntique-Regular.ttf");
+}
+//fin fuentes
+
+
+*{
+color: $colorFuente1;
+font-family:zen;
+}
+
+body{
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23acaa92' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+}
+.mainContainer{
+
+    width: 90%;
+    margin: auto;
+    padding: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.icono{
+    width: $logoSize;
+    color: $colorFuente1;
+    margin-top: 15px;
+    background-color: #585191;
+}
+
+
+
+// menu desplegable
+a:link,a,:visited,a:active{
+    text-decoration: none;
+}
+.desplegable1{
+    font-size: 30px;
+    padding:auto;
+    list-style-type: none;
+
+    .desplegable2{
+        font-size: 20px;
+        display: none;
+        background-color: $colorFondo1;
+        border: $borde1
+      }
+  }
+
+  .desplegable1:hover>.desplegable2{
+    display: block;
+    position:absolute;
+    background-color: black;
+    li{
+        border:$borde1;
+        border-collapse: collapse;
+        padding: auto;
+        margin:auto;
+    }
+
+  }
+  //fin desplegable
+
+
+  header{
+    background-color: $colorFondo1;
+    display: flex;
+    margin: auto;
+    border: $borde1;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+
+  }
+ //tarjetas
+ .tarjetas{
+
+     background-color:white;
+     display: flex;
+     height: 300px;
+     border:$borde1;
+     gap: 10px;
+     justify-content: space-evenly;
+     article {
+
+        font-family: noto;
+        width: 150px;
+        height: 200px;
+        background-color:$colorFondo1;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+        flex-direction: column;
+        border:$borde1;
+        margin:auto;
+
+
+        a{
+            font-size:30px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 80px;
+        }
+     }
+ }
