@@ -103,11 +103,12 @@ display: flex;
 /* animacion*/
 @keyframes animacion {
   from {background-color: aquamarine;}
-  to {background-color: pink;}
+  to {background-color: orangered;}
 }
 
 /* elemento animado */
 .animations {
   animation-name: animacion;
-  animation-duration: 10s;
+  animation-duration: 6s;
+  background-color: orangered;
 }

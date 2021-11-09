@@ -4,6 +4,20 @@ $colorFuente1:#585191;
 $colorFondo1:hsla(360, 100%, 0%, 0.50);
 $borde1:1px solid $colorFuente1;
 
+@keyframes animacionGiro {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(359deg)}
+  }
+
+@keyframes animacionColor{
+    from {background-color: white;}
+    to{background-color: red;}
+}
+@mixin flexi($justificado, $alineamiento,$display){
+    display: $display;
+    align-items: $alineamiento;
+    justify-content: $justificado;
+}
 
 
 //fuentes
@@ -15,12 +29,16 @@ $borde1:1px solid $colorFuente1;
     font-family:zen;
     src: url("../fuentes/zen/ZenAntique-Regular.ttf");
 }
+@font-face {
+    font-family: signika;
+    src: url("../fuentes/signika/Signika-VariableFont_wght.ttf");
+}
 //fin fuentes
 
 
 *{
 color: $colorFuente1;
-font-family:zen;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
@@ -28,6 +46,9 @@ body{
     background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23acaa92' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 }
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1024px){
+
 .mainContainer{
 
     width: 90%;
@@ -44,12 +65,17 @@ body{
     background-color: #585191;
 }
 
-
+a:hover{
+    background-color:orange;
+}
 
 // menu desplegable
 a:link,a,:visited,a:active{
     text-decoration: none;
 }
+
+
+
 .desplegable1{
     font-size: 30px;
     padding:auto;
@@ -59,56 +85,76 @@ a:link,a,:visited,a:active{
         font-size: 20px;
         display: none;
         background-color: $colorFondo1;
-        border: $borde1
+        border: $borde1;
+        margin: auto;
       }
   }
 
   .desplegable1:hover>.desplegable2{
     display: block;
     position:absolute;
-    background-color: black;
+
     li{
         border:$borde1;
         border-collapse: collapse;
-        padding: auto;
+        padding: 10px;
         margin:auto;
     }
-
   }
+  .desplegable2 li:hover{
+      background-color: orange
+      ;
+  }
+
   //fin desplegable
 
 
-  header{
-    background-color: $colorFondo1;
-    display: flex;
+  header,footer{
+    @include flexi(space-evenly,center ,flex );
+    background-color: #585191;
+
     margin: auto;
     border: $borde1;
-    justify-content: space-evenly;
+
     margin-bottom: 100px;
 
   }
+  footer *{
+      color: white;
+      font-size: larger;
+      flex-wrap: wrap;
+  }
+  header *{
+    color: white;
+    flex-wrap: wrap;
+  }
  //tarjetas
  .tarjetas{
-
-     background-color:white;
+     @include flexi(space-around,center ,flex );
+     background-color: $colorFondo1;
      display: flex;
-     height: 300px;
+     padding: 100px;
+     margin-bottom: 75px;
      border:$borde1;
      gap: 10px;
-     justify-content: space-evenly;
+     flex-wrap: wrap;
+     article:hover{
+         background-color: orange;
+         figure{
+              animation-name: animacionGiro;
+              animation-duration: 0.5s;
+         }
+     }
      article {
 
         font-family: noto;
-        width: 150px;
-        height: 200px;
+        width: auto;
+        height: auto;
         background-color:$colorFondo1;
-        display: flex;
-        justify-content:center;
-        align-content: center;
+        @include flexi(center,center ,flex );
         flex-direction: column;
         border:$borde1;
         margin:auto;
-
 
         a{
             font-size:30px;
@@ -120,3 +166,332 @@ a:link,a,:visited,a:active{
         }
      }
  }
+
+.iconos article{
+    @include flexi(center,center ,flex );
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    height: 200px;
+    flex-direction: row;
+    grid-template-rows: 1fr;
+    margin-bottom: 75px;
+    img{
+        width:80px;
+    }
+}
+
+.pie{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+align-items: flex-end;
+justify-content: center;
+img{ width: $logoSize;}
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+}
+ footer .redesSociales{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+//estilos de las paginas diferentes
+
+.portfolio{
+    font-size: 1.5rem;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: flex-start;
+    article{
+        display: grid;
+        justify-content: center;
+        section{
+            @include flexi(center,center ,flex );
+            border: $borde1;
+            figure{
+                img{
+                    width: $logoSize;
+                }
+            }
+        }
+        section:hover{background-color: orange;}
+    }
+}
+
+
+
+.curriculum{
+    @include flexi(space-evenly,center ,flex );
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+    article{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        a{
+            display: none;
+        }
+    }
+
+    section{
+
+        embed{
+            width: 800px;
+            height:500px;
+
+        }
+        .certificado{
+            height: 500px;
+        }
+    }
+    aside{
+        @include flexi(space-evenly,center ,flex );
+        background-color: aliceblue;
+        flex-direction: column;
+        width: 800px;
+        height: 400px;
+        border: $borde1;
+        margin-left: 20px;
+        section{
+            @include flexi(space-evenly,center ,flex );
+
+        }
+        img{
+            width: $logoSize;
+        }
+    }
+}
+
+.intereses{
+
+    background-color: #000000;
+
+    padding: auto;
+    margin: auto;
+    p{
+        a{
+            font-size:5px;
+        &:hover{
+            font-size: 30px;
+        }
+        }
+
+    }
+}
+
+.info {
+    padding-left:50px;
+    background-color: aliceblue;
+    display: grid;
+
+    article:first-child{
+        grid-area: 1/1;
+
+    }
+    article:nth-child(2){
+        grid-area:2/1;
+    }
+    aside{
+        grid-area: 1/2;
+        align-items: center;
+    }
+}
+
+.acercaDe{
+    display: flex;
+    flex-direction: column;
+    #boton{
+        animation-name:animacionColor;
+        animation-duration:1s ;
+        animation-iteration-count:infinite;
+        background-color: green;
+        margin-bottom: 10px;
+    }
+}
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+*{
+    font-size: 10px;
+    padding:2px;
+}
+footer{
+    .pie {margin: 0px;}
+}
+img{
+    display: none;
+
+}
+//index
+.menu,header,footer{
+    background-color: orange;
+}
+.tarjetas{
+    @include flexi(center,center ,flex );
+    flex-wrap: wrap;
+    article{
+        @include flexi(center,center ,flex );
+        flex-direction: column;
+    }
+    figure img{
+        width: $logoSize;
+        display: block;
+    }
+    a{
+        background-color:aliceblue;
+    }
+}
+//portfolio
+.portfolio a{
+    background-color: orange;
+}
+//curriculum
+.curriculum{
+ embed{display: none;}
+ article, aside{
+     border:$borde1;
+     margin-bottom: 10px;
+    }
+}
+//intereses
+.intereses{
+    h2{display:none;}
+    a{text-decoration: none;}
+    a:lang(es){
+        color:white;
+        background-color: black;
+    }
+    a:lang(en){
+        color: black;
+        background-color: aliceblue;
+    }
+}
+//info
+.info{
+    h3,ul{background-color: aliceblue;}
+}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width:1023px){
+img{width: $logoSize;}
+.tarjetas{
+    @include flexi(space-around,center ,flex );
+    background-color: $colorFondo1;
+    display: flex;
+    padding: 100px;
+    margin-bottom: 75px;
+    border:$borde1;
+    gap: 10px;
+    flex-wrap: wrap;
+    article:active{
+        background-color: orange;
+        figure{
+             animation-name: animacionGiro;
+             animation-duration: 5s;
+        }
+    }
+    article {
+
+       font-family: noto;
+       width: auto;
+       height: auto;
+       background-color:$colorFondo1;
+       @include flexi(center,center ,flex );
+       flex-direction: column;
+       border:$borde1;
+       margin:auto;
+
+       a{
+           font-size:30px;
+           display: flex;
+           justify-content: center;
+       }
+       img{
+           width: 80px;
+       }
+    }
+}
+.iconos article{
+    @include flexi(center,center ,flex );
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    height: 200px;
+    flex-direction: row;
+    grid-template-rows: 1fr;
+    margin-bottom: 75px;
+    img{
+        width:$logoSize
+    }
+}
+
+.pie{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+align-items: flex-end;
+justify-content: center;
+img{ width: 0px;}
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+}
+
+header,footer{
+   .menu,.pie{@include flexi(space-evenly,center ,flex );}
+    height: auto;
+    background-color: orange;
+    margin-bottom: 100px;
+    img{display:none;}
+}
+//curriculum
+.curriculum{
+    section{
+        @include flexi(space-evenly,center ,flex );
+        background-color: aliceblue;
+        margin-bottom: 25px;
+    }
+    embed{
+        width: 25px;
+        display: none;
+    }
+}
+//acerca de
+.acercaDe{
+    #boton{
+        animation-name:animacionColor;
+        animation-duration:1s ;
+        animation-iteration-count:infinite;
+        background-color: green;
+        margin-bottom: 10px;
+    }
+}
+//intereses
+.intereses{
+    h2{display: none;}
+    a{text-decoration: none;}
+    p:lang(es){background-color: aliceblue;}
+    p:lang(en){background-color: orange;}
+}
+//portfolio
+.portfolio{
+    h4{background-color: aliceblue;}
+    section{
+        background-color: orange;
+    }
+}
+//info
+.info{
+    article{background-color: orange;}
+    aside{background-color: aliceblue;}
+}
+
+}

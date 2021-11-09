@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/jpg" href="iconos/coding.png"/>
   <link rel="stylesheet" href="../ccs/estiloPortfolio.css">
-  <title>Index</title>
+  <title>CV</title>
 </head>
 <body>
   <div class="mainContainer">
@@ -14,46 +13,52 @@
     <header>
 
       <i><img src="./iconos/coding.png" alt="" class="icono"></i>
-        <h1>Full Stack Developing</h1>
+        <h1>CV</h1>
       <nav class="menu">
         <ul class="desplegable1">
           <li><a href="">MENU</a></li>
           <!-- menu desplegable -->
             <ul class="desplegable2">
-              <li><a href="CV.html" target="blank">curriculum vitae</a></li>
               <li><a href="acercaDe.html" target="blank">acerca de</a></li>
               <li><a href= "intereses.html" target="blank">intereses</a></li>
-              <li><a href= "portfolio.html" target="blank">portfolio</a></li>
+              <li><a href= "index.html" target="blank">home</a></li>
               <li><a href= "info.html" target="blank">info</a></li>
+              <li><a href= "portfolio.html" target="blank">portfolio</a></li>
             </ul>
           <!-- fin de menu -->
         </ul>
       </nav>
     </header>
     <main>
-      <!-- div con tarjetas -->
-      <div class="tarjetas">
+      <!-- div cv -->
+      <div class="curriculum">
         <article>
-          <a href="CV.html" target="blank"><h4>curriculum</h4></a>
-          <figure><img src="iconos/cv.png" alt=""></figure>
+          <section class="cv">
+            <embed src="archivos/miPrimerCV.pdf" type="application/pdf" >
+              <a href="./archivos/miPrimerCV.pdf" download="./archivos/miPrimerCV.pdf">descarga CV</a>
+          </section>
+          <section>
+            <embed class="certificado" src="archivos/awsCertified.pdf" type="application/pdf">
+              <a href="./archivos/awsCertified.pdf" download="./archivos/awsCertified.pdf">decarga certificado AWS</a>
+          </section>
         </article>
-        <article>
-          <a href="portfolio.html"><h4>portfolio</h4></a>
-          <figure><img src="iconos/portfolio.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="intereses.html"><h4>intereses</h4></a>
-          <figure><img src="iconos/interests.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="info.html"><h4>sobre mi</h4></a>
-          <figure><img src="iconos/info.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="acercaDe.html"><h4>acerca de</h4></a>
-          <figure><img src="iconos/project-management.png" alt=""></figure>
-        </article>
+        <aside>
+
+            <section>
+              <a href="https://ies-almudena.es/">I E S Nuestra señora de la Almudena</a>
+              <figure><img src="imagenes/almudenaIes.png" alt=""></figure>
+            </section>
+            <section>
+              <a href="https://www.iestetuan.es/cmsj/">I E S Tetuan</a>
+              <figure><img src="imagenes/imagen IES.jpg" alt=""></figure>
+            </section>
+            <section>
+              <a href="https://aws.amazon.com/es/">Amazon AWS</a>
+              <figure><img src="imagenes/aws.bmp" alt=""></figure>
+            </section>
+        </aside>
       </div>
+       <!-- fin div cv -->
       <div class="iconos">
       <article>
         <figure><img src="iconos/mysql.png" alt=""></figure>

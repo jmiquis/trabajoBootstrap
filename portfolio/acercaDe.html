@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/jpg" href="iconos/coding.png"/>
   <link rel="stylesheet" href="../ccs/estiloPortfolio.css">
-  <title>Index</title>
+  <title>Acerca de</title>
 </head>
 <body>
   <div class="mainContainer">
@@ -14,46 +13,39 @@
     <header>
 
       <i><img src="./iconos/coding.png" alt="" class="icono"></i>
-        <h1>Full Stack Developing</h1>
+        <h1>Acerca de</h1>
       <nav class="menu">
         <ul class="desplegable1">
           <li><a href="">MENU</a></li>
           <!-- menu desplegable -->
             <ul class="desplegable2">
-              <li><a href="CV.html" target="blank">curriculum vitae</a></li>
-              <li><a href="acercaDe.html" target="blank">acerca de</a></li>
+              <li><a href="index.html" target="blank">Home</a></li>
               <li><a href= "intereses.html" target="blank">intereses</a></li>
-              <li><a href= "portfolio.html" target="blank">portfolio</a></li>
+              <li><a href= "CV.html" target="blank">cv</a></li>
               <li><a href= "info.html" target="blank">info</a></li>
+              <li><a href= "portfolio.html" target="blank">portfolio</a></li>
             </ul>
           <!-- fin de menu -->
         </ul>
       </nav>
     </header>
     <main>
-      <!-- div con tarjetas -->
-      <div class="tarjetas">
-        <article>
-          <a href="CV.html" target="blank"><h4>curriculum</h4></a>
-          <figure><img src="iconos/cv.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="portfolio.html"><h4>portfolio</h4></a>
-          <figure><img src="iconos/portfolio.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="intereses.html"><h4>intereses</h4></a>
-          <figure><img src="iconos/interests.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="info.html"><h4>sobre mi</h4></a>
-          <figure><img src="iconos/info.png" alt=""></figure>
-        </article>
-        <article>
-          <a href="acercaDe.html"><h4>acerca de</h4></a>
-          <figure><img src="iconos/project-management.png" alt=""></figure>
-        </article>
+
+      <!-- div acerca de-->
+      <div class="acercaDe">
+        <input type="button" value="especificaciones" id="boton" onclick="acercaDe()">
+        <textarea name="" id="salida" cols="30" rows="10"></textarea>
+        <script lang="javascript">
+          function acercaDe(){
+            let mensaje=
+            " ESPECIFICACIONES TÉCNICAS \n Licencia Apache 2.0 \n Lenguajes utilizados: HTML, CSS y javascript \n CSS FlexBox y CSS Grid \n Scss \n Todos los efectos han sido realizados con HTML y CSS ";
+
+            document.getElementById("salida").value=mensaje;
+          }
+
+        </script>
       </div>
+       <!-- fin div acerca de -->
       <div class="iconos">
       <article>
         <figure><img src="iconos/mysql.png" alt=""></figure>
