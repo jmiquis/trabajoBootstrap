@@ -4,67 +4,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="ccs/estilosEjercicios.css">
+  <link rel="stylesheet" href="../ccs/estilosEjercicios.css">
   <title>Document</title>
 </head>
 <body>
   <!-- cabecera -->
   <header>
     <!-- menu navegacion -->
-    <nav>
-      <ul>
-        <li><a href="#">uso de css</a></li>
-        <li class="desplegable1"><a href="#">css 3</a>
-          <ul class="desplegable2">
-            <li><a href="#">rounded corner</a></li>
-            <li><a href="#">border images</a></li>
-            <li><a href="#">backgrounds</a></li>
-            <li><a href="#">gradients</a></li>
-            <li><a href="#">shadows</a></li>
-            <li><a href="#">text-effects</a></li>
-            <li><a href="#">2D Transforms</a></li>
-            <li><a href="#">3D Transforms</a></li>
-            <li><a href="#">CSS Transitions</a></li>
-            <li><a href="#">CSS Animations</a></li>
-          </ul>
-        </li>
-      </ul>
-      </nav>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="css.html">uso de css</a></li>
+          <li class="desplegable1"><a href="#">css 3</a>
+            <ul class="desplegable2">
+              <li><a href="#1">rounded corner</a></li>
+              <li><a href="#2">border images</a></li>
+              <li><a href="#3">backgrounds</a></li>
+              <li><a href="#4">gradients</a></li>
+              <li><a href="#5">shadows</a></li>
+              <li><a href="#6">text-effects</a></li>
+              <li><a href="#7">2D Transforms</a></li>
+              <li><a href="#8">3D Transforms</a></li>
+              <li><a href="#9">CSS Transitions</a></li>
+              <li><a href="#10">CSS Animations</a></li>
+            </ul>
+          </li>
+        </ul>
+        </nav>
+    </div>
+
   </header>
   <!-- principal -->
   <main>
     <!--rounded borders  -->
-    <article class="roundedCorner">
+    <article class="roundedCorner" id="1">
       <h3>rounded corners</h3>
         <p>Se trata de redondear las esquinas de un borde</p>
     </article>
     <!-- border image -->
-    <article class="borderImage">
+    <article class="borderImage" id="2">
       <h3>Border-Image</h3>
         <p>Permite utilizar una imagen como border de un elemento</p>
     </article>
     <!-- css backgrounds -->
-    <article class="backgrounds">
+    <article class="backgrounds" id="3">
       <h3>CSS Backgrounds</h3>
         <p>Controla las opciones CSS disponibles para el fondo del elemento</p>
     </article>
     <!-- css gradients -->
-    <article class="gradients">
+    <article class="gradients" id="4">
       <h3>CSS gradients</h3>
         <p>Controla las opciones CSS disponibles para el fondo del elemento</p>
     </article>
     <!-- css shadows -->
-    <article class="shadows">
+    <article class="shadows" id="5">
       <h3>CSS shadows</h3>
         <p>Con CSS shadows se pueden dar efectos de sombreado a elementos html</p>
     </article>
       <!-- text-effects -->
-      <article class="text-effects">
+      <article class="text-effects" id="6">
         <h3>text-effects</h3>
           <p>CSS tiene una variedad de estilos predefinidos para textos</p>
       </article>
       <!-- 2D TRANSFORMS -->
-      <article class="transform2D">
+      <article class="transform2D" id="7">
         <h3>Transformaciones en 2 dimensiones</h3>
         <p>Metodos CSS para modificar la disposicion de elementos dentro de los ejes de 2 dimensiones</p>
         <div class="contenedorHorizontal">
@@ -73,7 +76,7 @@
         </div>
       </article>
       <!-- 3D TRANSFORMS -->
-      <article class="transform3D">
+      <article class="transform3D" id="8">
         <h3>Transformaciones en 3 dimensiones</h3>
         <p>Similar a la anterior, con la diferencia de que entra en juego una tercera dimension.</p>
         <div class="contenedorHorizontal">
@@ -82,19 +85,23 @@
         </div>
       </article>
        <!-- CSS Transitions -->
-       <article class="transitions">
+       <article class="transitions" id="9">
         <h3>transiciones CSS</h3>
           <p>Permite modificar valores de una manera más fluída</p>
           <input type="button" value="pasar el raton por encima" class="botonTransicion">
       </article>
        <!-- CSS Animations -->
-       <article class="animations">
+       <article class="animations" id="10">
         <h3>Animaciones CSS</h3>
           <p>CSS permite hacer animaciones de elementos sin la necesidad de javascript o flash</p>
 
       </article>
   </main>
   <!-- pie -->
-  <footer></footer>
+  <footer>
+    <div>
+      Jorge Miquis Garcia 2 DAW IES TETUAN DE LAS VICTORIAS Mail <a href="mailto:jmiquis87@gmail.com">click para enviar email</a>
+    </div>
+  </footer>
 </body>
 </html>

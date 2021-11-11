@@ -1,3 +1,34 @@
+* {
+  margin: 10px;
+  padding: 5px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul ul, nav ul li {
+  border: 1px solid black;
+  list-style: none;
+  border-collapse: collapse;
+  background-color: beige;
+}
+
 .desplegable1 {
   padding: auto;
 }
@@ -14,11 +45,162 @@
   background-color: rgba(122, 122, 122, 0.39);
 }
 
-.roundedCorners {
+header div, footer div {
+  background-color: orange;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.roundedCorner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 15px 50px 30px 5px;
-  background-color: black;
+  background: grey;
+  color: white;
   padding: 20px;
   width: 200px;
-  height: 200px;
+  height: 150px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.borderImage {
+  border: 40px solid transparent;
+  padding: 15px;
+  -o-border-image: url("../imagenes/border/image.jpg") 20% round;
+     border-image: url("../imagenes/border/image.jpg") 20% round;
+}
+
+.backgrounds {
+  background-image: url("../imagenes/gondola-ride-in-venice.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: aliceblue;
+}
+
+.gradients {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue), color-stop(purple), to(black));
+  background-image: linear-gradient(blue, purple, black);
+  color: white;
+}
+
+.shadows {
+  text-shadow: 1px 2px;
+}
+
+.text-effects {
+  white-space: wrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.contenedorHorizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.transform2D img {
+  width: 50%;
+}
+
+.img2D {
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+}
+
+.transform3D img {
+  width: 50%;
+}
+
+.img3D {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.botonTransicion {
+  width: 50%;
+  height: auto;
+  background: aquamarine;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  color: white;
+}
+
+.botonTransicion:hover {
+  width: 300px;
+}
+
+/* animacion*/
+@-webkit-keyframes animacion {
+  from {
+    background-color: aquamarine;
+  }
+  to {
+    background-color: orangered;
+  }
+}
+@keyframes animacion {
+  from {
+    background-color: aquamarine;
+  }
+  to {
+    background-color: orangered;
+  }
+}
+
+/* elemento animado */
+.animations {
+  -webkit-animation-name: animacion;
+          animation-name: animacion;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  background-color: orangered;
 }
 /*# sourceMappingURL=estilosEjercicios.css.map */

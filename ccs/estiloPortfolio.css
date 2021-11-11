@@ -550,6 +550,18 @@ body {
     border: 1px solid #585191;
     margin: auto;
   }
+  .tarjetas article a:nth-child(1) {
+    text-decoration: none;
+  }
+  .tarjetas article a:nth-child(2) {
+    text-decoration: none;
+  }
+  .tarjetas article a:nth-child(3) {
+    text-decoration: none;
+  }
+  .tarjetas article a:nth-child(4) {
+    text-decoration: none;
+  }
   .tarjetas article a {
     font-size: 30px;
     display: -webkit-box;

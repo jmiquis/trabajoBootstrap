@@ -20,6 +20,7 @@ $borde1:1px solid $colorFuente1;
 }
 
 
+
 //fuentes
 @font-face{
     font-family:noto;
@@ -380,6 +381,8 @@ img{
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width:1023px){
+
+
 img{width: $logoSize;}
 .tarjetas{
     @include flexi(space-around,center ,flex );
@@ -398,6 +401,12 @@ img{width: $logoSize;}
         }
     }
     article {
+        //uso del for en sass
+        @for $i from 1 to 5 {
+            a:nth-child(#{$i}){
+                text-decoration: none;
+            }
+        }
 
        font-family: noto;
        width: auto;
