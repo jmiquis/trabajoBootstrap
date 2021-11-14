@@ -46,7 +46,6 @@ nav ul ul, nav ul li {
 }
 
 header div, footer div {
-  background-color: orange;
   height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -81,6 +80,10 @@ main {
           align-items: center;
 }
 
+main article {
+  padding: 30px;
+}
+
 .roundedCorner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,6 +104,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: auto;
 }
 
 .borderImage {
@@ -111,7 +115,7 @@ main {
 }
 
 .backgrounds {
-  background-image: url("../imagenes/gondola-ride-in-venice.jpg");
+  background-image: url("../imagenes/border.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -202,5 +206,96 @@ main {
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
   background-color: orangered;
+}
+
+footer {
+  background-color: beige;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.button {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: aquamarine;
+  color: grey;
+}
+
+.button button {
+  background-color: blueviolet;
+  border: 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.paginacion {
+  background-color: #4CAF50;
+  display: inline-block;
+}
+
+.paginacion a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.paginacion a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.paginacion a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.columnas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.columnas p {
+  -webkit-column-count: 4;
+          column-count: 4;
+}
+
+.UserIntrerface {
+  outline: 4px solid green;
+  outline-offset: 15px;
+  resize: both;
+  overflow: auto;
 }
 /*# sourceMappingURL=estilosEjercicios.css.map */
