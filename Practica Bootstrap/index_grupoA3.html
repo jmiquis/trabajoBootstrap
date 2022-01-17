@@ -51,22 +51,66 @@
                     ejer4-> popover     -> Alfonso
                     ejer5-> toast       -> Babs
                     ejer6-> scrollspy   -> Daniel
-                    ejer7-> offcanvas   -> Javi    
+                    ejer7-> offcanvas   -> Javi
             -->
+        
 
-            
-            <!-- carrusel --> 
-            <div class="ej1">           
-                <section id="ej1">
+            <!-- carrusel -->
+        <div class="ej1">
+            <section id="ej1">
                     <!-- Jorge esta es tu area de trabajo -->
-                    <h2>Titulo de parte de alumno 1</h2><br><br>
-                    <p>Parrafo para el alumno 1 !Documentame!</p><br>
-                    <div class="alumno1container">Hola soy tu div para hacerme container y trabajar dentro</div>
-                </section>
-            </div>
+                    <h2>CAROUSEL</h2><br><br>
+                    <p>El plugin "carousel" , más conocido como slideshow permite presentar una serie de fotografias que van pasando de una a otra de manera automática o manual</p><br>
+                <div class="alumno1container">
+
+                    <div class="container">
+
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                                        <!-- lista ordernada para os indicadores que muestran de manera manual cada una de las fotos -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+
+                                        <!-- divs donde va cada una de las imágenes -->
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <img src="../Imagenes/cafe-burst.jpg" alt="Los Angeles" style="width:100%;">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="../Imagenes/saffron.jpg"       alt="Chicago"     style="width:100%;">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="../Imagenes/chocolate.jpg"      alt="New york"    style="width:100%;">
+                                    </div>
+
+                                 </div>
+
+                                        <!-- controles de izquerda y derecha -->
+                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">anterior</span>
+                                        </a>
+
+                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">siguiente</span>
+                                        </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
 
             <!-- modal -->
-            <div class="ej2">            
+            <div class="ej2">
                 <section id="ej2">
                     <!-- Javi esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 2</h2><br><br>
@@ -76,7 +120,7 @@
             </div>
 
             <!-- tooltip -->
-            <div class="ej3">            
+            <div class="ej3">
                 <section id="ej3">
                     <!-- Daniel esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
@@ -86,7 +130,7 @@
             </div>
 
             <!-- popover -->
-            <div class="ej4">            
+            <div class="ej4">
                 <section id="ej4">
                     <!-- Alfonso esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
@@ -96,7 +140,7 @@
             </div>
 
             <!-- toast -->
-            <div class="ej5">            
+            <div class="ej5">
                 <section id="ej5">
                     <!-- Babs esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
@@ -106,7 +150,7 @@
             </div>
 
             <!-- scrollspy -->
-            <div class="ej6">            
+            <div class="ej6">
                 <section id="ej6">
                     <!-- Daniel esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
@@ -116,7 +160,7 @@
             </div>
 
             <!-- offcanvas -->
-            <div class="ej7">            
+            <div class="ej7">
                 <section id="ej7">
                     <!-- Javi esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
@@ -136,9 +180,9 @@
               <br/>
               Dirección postal: Calle de la Vía Límite, Madrid
               <br/>
-            </address> 
+            </address>
             &reg; Reservados todos los derechos. &reg;
-          </div>    
+          </div>
           <div class="sello">
               <a href="http://jigsaw.w3.org/css-validator/check/referer">
                   <img style="border:0;width:88px;height:31px"
