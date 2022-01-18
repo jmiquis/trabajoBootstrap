@@ -11,7 +11,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Bootstrap</title>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-example2">
+    <style>
+        body{
+            position: relative;
+        }
+    </style>
     <header>
         <h1>Cabecera principal del Grupa A 1</h1>
     </header>
@@ -125,7 +130,26 @@
                     <!-- Daniel esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
                     <p>Parrafo para el alumno 3 !Documentame!</p><br>
-                    <div class="alumno1container">Hola soy tu div para hacerme container y trabajar dentro</div>
+                    <div class="alumno1container">
+                        <button type="button" class="btn btn-secondary" data-html="true"  data-toggle="tooltip" data-placement="top" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+                            Tooltip on top <!-- data-html="true" es para que reconozca el html de title-->
+                          </button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                            Tooltip on right
+                          </button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            Tooltip on bottom
+                          </button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                            Tooltip on left
+                          </button>
+                          <img src="../Imagenes/cafe-burst.jpg" alt="" data-toggle="tooltip" data-placement="top" title="Titulo" height="100px">
+                          <script>$(function () {
+                                $('[data-toggle="tooltip"]').tooltip()
+                            })
+                            //$('#example').tooltip(options)
+                          </script>
+                    </div>
                 </section>
             </div>
 
@@ -155,7 +179,46 @@
                     <!-- Daniel esta es tu area de trabajo -->
                     <h2>Titulo de parte de alumno 3</h2><br><br>
                     <p>Parrafo para el alumno 3 !Documentame!</p><br>
-                    <div class="alumno1container">Hola soy tu div para hacerme container y trabajar dentro</div>
+                    <div class="alumno1container">
+                        <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Navbar</a>
+                            <ul class="nav nav-pills">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#fat">@fat</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#mdo">@mdo</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#one">one</a>
+                                  <a class="dropdown-item" href="#two">two</a>
+                                  <div role="separator" class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#three">three</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                            <h4 id="fat">@fat</h4>
+                            <p>...</p>
+                            <h4 id="mdo">@mdo</h4>
+                            <p>...</p>
+                            <h4 id="one">one</h4>
+                            <p>...</p>
+                            <h4 id="two">two</h4>
+                            <p>...</p>
+                            <h4 id="three">three</h4>
+                            <p>...</p>
+                          </div>
+                    </div>
+                    <script>
+                        $('body').scrollspy({ target: '#navbar-example' });
+                        $('[data-spy="scroll"]').each(function () {
+                        var $spy = $(this).scrollspy('refresh')
+                        })
+                    </script>
                 </section>
             </div>
 
