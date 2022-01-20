@@ -57,10 +57,80 @@
                 <div class="ej1">           
                     <section id="ej1">
                         <!-- Jorge esta es tu area de trabajo -->
-                        <h2>Titulo de parte de alumno 1</h2><br><br>
-                        <p>Parrafo para el alumno 1 !Documentame!</p><br>
-                        <div class="alumno1container">Hola soy tu div para hacerme container y trabajar dentro</div>
-                    </section>
+
+                        <!--  
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img src="..." class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            </div>
+
+
+                        -->
+                        <h2>CAROUSEL</h2><br><br>
+                        <p>El plugin "carousel" , más conocido como slideshow permite presentar una serie de fotografias que van pasando de una a otra de manera automática o manual</p><br>
+                    <div class="alumno1container">
+    
+                        <div class="container">
+    
+                            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    
+                                            <!-- lista ordernada para os indicadores que muestran de manera manual cada una de las fotos -->
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+    
+                                            <!-- divs donde va cada una de las imágenes -->
+                                    <div class="carousel-inner">
+    
+                                        <div class="carousel-item active">
+                                            <img src="Imagenes/cafe-burst.jpg" alt="Los Angeles" style="width:100%;">
+                                        </div>
+    
+                                        <div class="carousel-item">
+                                            <img src="Imagenes/saffron.jpg"       alt="Chicago"     style="width:100%;">
+                                        </div>
+    
+                                        <div class="carousel-item">
+                                            <img src="Imagenes/chocolate.jpg"      alt="New york"    style="width:100%;">
+                                        </div>
+    
+                                     </div>
+    
+                                            <!-- controles de izquerda y derecha -->
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+    
+                                            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </section>
                 </div>
     
                 <!-- modal -->
@@ -96,10 +166,59 @@
                 <!-- toast -->
                 <div class="ej5">            
                     <section id="ej5">
-                        <!-- Babs esta es tu area de trabajo -->
-                        <h2>Titulo de parte de alumno 3</h2><br><br>
-                        <p>Parrafo para el alumno 3 !Documentame!</p><br>
-                        <div class="alumno1container">Hola soy tu div para hacerme container y trabajar dentro</div>
+                        <!-- Grupo A3 -> Barbara VN: -->
+                        <h2>Ejer05: Bootstrap -Toast-</h2><br>
+                        <p><b>Toast</b> es mensaje de alerta ligero y fácilmente personalizable, con el cual podemos, opcionalmente, enviar notificaciones a los usuarios/visitantes de una web. Este se muestra por un par de segundos al producirse un evento (ej: clicar botones, enviar formularios...ect).</p><br>
+                       
+                        <p>Toast admite múltiples personalizaciones o configuraciones:</p>
+                        <ul>
+                            <li><strong>CREACION:</strong> Para crear un <b>Toast</b> necesitamos usar una clase: <b>.toastclase</b> y dentro de ella podemos dividir la estructura en la cabecera usando <b>.toast-headery</b> y en cuerpo usando <b>.toast-bodydentro</b>.</li>
+                            <li><strong>ESTRUCTURA:</strong> Dentro de la clase creada podemos dividir la estructura en la cabecera usando <b>.toast-headery</b> y en cuerpo usando <b>.toast-bodydentro</b>.</li>
+                            <li><strong>MOSTRAR Y OCULTAR:</strong> Por defecto los <b>Toast</b> están ocultos de forma predeterminada, por lo que para mostrarlos necesitamos usar la clase <b>.showclase</b>. Por otra parte se cierra automáticamente al cabo de un par de segundos, aunque si quisiéramos personalizarlo para poder ser cerrado por un usuario, requerimos de un botón, al que debebemos agregar: <b>data-bs-dismiss="toast"</b>.</li>
+                            <li><strong>HUBICACION:</strong> <b>Toast</b> puede situarse donde uno quiera y cuantos uno quiera o necesite; <b>Toast</b>, admite configuración con Flex box.</li>
+                            <li><strong>COLOR:</strong> los esquemas de <b>Toast</b> están divididos en base a color y color de fondo; incluso admite transparencias.</li>
+                            <li><strong>ESTILO:</strong> podemos darle cualquier estilo que queramos y podemos incluir dentro con iconos o vectores.</li>
+                            <li><strong>ACCESIBILIDAD:</strong> la estructura de <b>Toast</b> deben estár envueltos en una aria-liveregión, ya que su principal objetivo es comunicativo.</li>
+                        </ul><br><br>
+              
+                        <h2>Codigo ej:Toast</h2>
+                        <code>
+                          &lt;div class="container"&gt; <br>
+                           &emsp; &lt;button type="button" onclick="mostrarToast()" class="btn btn-primary" id="liveToastBtn"&gt;Mostrar Toast&lt;/button&gt; <br>
+                      
+                           &emsp; &lt;div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"&gt; <br>
+                           &emsp;&emsp; &lt;div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"&gt; <br>
+                           &emsp;&emsp;&emsp; &lt;div class="toast-header"&gt; <br>
+                           &emsp;&emsp;&emsp;&emsp; &lt;img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-hand-space-vitaliy-gorbachev-blue-vitaly-gorbachev.png" class="rounded me-2" alt="Icon-hand-space"&gt; <br>
+                           &emsp;&emsp;&emsp;&emsp; &lt;strong class="me-auto"&gt;Holiwi!&lt;/strong&gt; <br>
+                           &emsp;&emsp;&emsp;&emsp; &lt;small&gt;Header Toast&lt;/small&gt; <br>
+                           &emsp;&emsp;&emsp;&emsp; &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt; <br>
+                           &emsp;&emsp;&emsp; &lt;/div&gt; <br>
+                           &emsp;&emsp;&emsp; &lt;div class="toast-body"&gt; <br>
+                           &emsp;&emsp;&emsp;&emsp; Esto es un mensaje en el body del Toast. <br>
+                           &emsp;&emsp;&emsp; &lt;/div&gt; <br>
+                           &emsp;&emsp; &lt;/div&gt; <br>
+                           &emsp; &lt;/div&gt; <br>
+                            &lt;/div&gt;<br>
+                          </code><br><br>
+              
+                        <div class="container">
+                          <button type="button" onclick="mostrarToast()" class="btn btn-primary" id="liveToastBtn">Mostrar Toast</button>
+              
+                          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                              <div class="toast-header">
+                                <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-hand-space-vitaliy-gorbachev-blue-vitaly-gorbachev.png" class="rounded me-2" alt="Icon-hand-space">
+                                <strong class="me-auto">Holiwi!</strong>
+                                <small>Header Toast</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                              </div>
+                              <div class="toast-body">
+                                  Esto es un mensaje en el body del Toast.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </section>
                 </div>
     
@@ -148,6 +267,8 @@
     </div>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="JS/scripts.js"></script>
+
 <script>
 
 </script>
