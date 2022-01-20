@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        #ejer1{
+            background-color: #545454;
+            margin-right: 900px;
+            padding-bottom: 50px;
+        }
+        #mi-nombre1{
+            background-color: #18A3FF;
+            width: 200px;
+            height: 250px;
+            display: block;
+            margin-left: 110px;
+            margin-right: auto;
+            
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            //Ejer1
+            
+            $("#ejer1>header").css("color","grey");
+
+            $("#mi-nombre1").click(function(){
+                    $('#mi-nombre1').hide();
+                    setTimeout(function() {
+                        $("#mi-nombre1").show();
+                    },5000);
+
+                    setTimeout(function() {
+                        $("#mi-nombre1").hide();
+                    },8000);
+
+                    setTimeout(function() {
+                        $("#mi-nombre1").show();
+                    },8200);
+            });
+            //Ejer1
+            
+            //Ejer2
+            
+                $("#mi-nombre2").mouseenter(function(){
+                    setTimeout(function() {
+                        $("#mi-nombre2").fadeTo("fast",0.3);
+                    },400);
+                });
+            
+                $("#mi-nombre2").mouseleave(function(){
+                    $("#mi-nombre2").fadeTo("fast",1);
+                });
+            //Ejer2
+            
+            //Ejer3
+                var realizado ="";
+                $("#mover-izquierda").click(function(){
+                    if(realizado==false){
+                    $("#mover-izquierda").animate({right: '250px'}, "slow");
+                        realizado=true;
+                    }else{
+                        $("#mover-izquierda").animate({right: '100%'},"fast");
+                        realizado==false;
+                    }
+                });
+            //Ejer3
+        
+            //Ejer5
+
+                $(".requerimiento").change(function() {
+                    if($("#requerimiento1").is(":checked")){
+                        $("#man-one").hide();
+                    }else{
+                        $("#man-one").show();
+                    }
+
+                    if($("#requerimiento2").is(":checked")){
+                        $("#man-two").hide();
+                    }else{
+                        $("#man-two").show();
+                    }
+
+                    if($("#requerimiento3").is(":checked")){
+                        $("#man-three").hide();
+                    }else{
+                        $("#man-three").show();
+                    }
+                });
+            //Ejer5
+
+            //Ejer6
+            $(".asignatura").focusin(function(){
+                $(this).css("color", "red");
+            });
+            $(".asignatura").focusout(function(){
+                $(this).css("color", "green");
+            });
+            //Ejer6
+
+            //Ejer7
+                $(".selected > p").css("background-color", "yellow");
+            //Ejer7
+        });
+    </script>
+    <div id="ejer1">
+        <header><h1>Ejercicio1</h1></header>
+
+        <div id="enunciado1">
+            <p>1º Cree un enlace que lleve su nombre y una cabecera con “Ejercicio1” similar a: </p>
+            <p>Utilice jquery para que al pulsar en el enlace se oculte el enlace con una duración de 5 segundos. Inmediatamente después se muestra tardando 3 segundos y finalmente se vuelve a mostrar en 0,2 segundos.</p>
+            <p> Luego lo volverá a mostrar tardando 2 segundos y nada más finalizar de mostrarlo se mostrará una alerta en pantalla “He tardado 2 segundos en mostrarme”</p>
+        </div>
+        
+        <a id="mi-nombre1" href="#mi-nombre1">Daniel</a>
+    </div>
+
+    <div id="ejer2">
+            <header><h1>Ejercicio2</h1></header>
+            <div id="enunciado2">
+                <p>2º Cree un botón con su nombre. Al situar el cursor en el mismo se modificará la opacidad a 0,3 en 0,4 segundos. Y al salir se dejará como estaba en 0,4 segundos.</p>
+            </div>
+            <button id="mi-nombre2">Daniel</button>
+     </div>
+
+    <div id="ejer3">
+        <header><h1>Ejercicio3</h1></header>
+        <div id="enunciado3">
+            <p>3º Cree un botón que al pulsarlo la primera vez lo mueva 400px a la izquierda y la siguiente vez lo deje completamente a la izquierda. Si se vuelve a pulsar lo movería a 400px, si lo vuelve a pulsar a la izquierda,… y así sucesivamente. En el primer caso que sea slow y en  el segundo fast.
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <button id="mover-izquierda" style="position: relative;" >izquierda</button>
+        </div>
+    </div>
+
+    <div id="ejer5">
+        <header><h1>Ejercicio5</h1></header>
+        <div id="enunciado5">
+            <p>5º Crea un formulario con 3 chexbox: Mayor de edad, Socio, Tarjeta Regalo.
+
+                Además tendrá una tabla con las siguientes filas:
+                ⦁	Debe ir acompañado de un adulto
+                ⦁	No puede traer invitados
+                ⦁	Abonará 5% de tasas
+                 
+                En caso de pulsar el primer checkbox se esconderá la primera fila. En el caso de pulsar el segundo se esconderá la segunda fila y si se pulsa la tercera se esconderá la tercera fila. En caso contrario se mostrarán las mismas filas.
+                
+            </p>
+        </div>
+
+        <table style="border: 1px solid black;">
+            <tr><td id= "man-one" style="border: 1px solid black;">Debe ir acompañado de un adulto</td></tr>
+            <tr><td id ="man-two" style="border: 1px solid black;">No puede traer invitados</td></tr>
+            <tr><td id ="man-three" style="border: 1px solid black;">Abonará 5% de tasas</td></tr>
+        </table>
+
+        <input type="checkbox" id="requerimiento1" class="requerimiento" value="adulto">
+        <label for=""> Debe ir acompañado de un adulto</label><br>
+        <input type="checkbox" id="requerimiento2" class="requerimiento" value="invitados">
+        <label for=""> No puede traer invitados</label><br>
+        <input type="checkbox" id="requerimiento3" class="requerimiento" value="tasas">
+        <label for=""> Abonará 5% de tasas</label><br>
+    </div>
+
+    <div id="ejer6">
+        <header><h1>Ejercicio6</h1></header>
+        <h4>Introduzca las notas</h4>
+
+        <div id="enunciado6">
+            <p>
+                6º Crear un formulario que pida las notas de las asignaturas del curso. Al situarse el foco en cada uno de los campos de nota se debe modificar el color del texto a rojo. Cuando no tenga el foco el color del texto debe ser verde.
+            </p>
+        </div>
+
+        <label for="">Nota de asingatura 1</label>
+        <input type="text" id="" class="asignatura" value=""><br>
+        <label for=""> Nota de asingatura 2</label>
+        <input type="text" id="" class="asignatura" value=""><br>
+        <label for=""> Nota de asingatura 3</label>
+        <input type="text" id="" class="asignatura" value=""><br>
+       
+    </div>
+
+    <div id="ejer7">
+        <header><h1>Ejercicio7</h1></header>
+        <div id="enunciado7">
+            <p>
+                7º Crear una página web con elementos div algunos serán de la clase “selected” y otros no. Todos ellos tendrán párrafos dentro. Crear un script para que aquellos párrafos cuyo padre sea de la clase selected aparezcan con el fondo en color amarillo.
+            </p>
+        </div>
+
+        <div class="selected">
+            <p>Párrafo1 con un poco de texto</p>
+            <p>Párrafo1 con un poco de texto</p>
+            <p>Párrafo1 con un poco de texto</p>
+        </div>
+        <div class="selected">
+            <p>Párrafo2 con un poco de texto</p>
+            <p>Párrafo2 con un poco de texto</p>
+            <p>Párrafo2 con un poco de texto</p>
+        </div>
+        <div class="selected">
+            <p>Párrafo3 con un poco de texto</p>
+            <p>Párrafo3 con un poco de texto</p>
+            <p>Párrafo3 con un poco de texto</p>
+        </div>
+    </div>
+</body>
+</html>
